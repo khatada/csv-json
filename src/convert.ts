@@ -20,7 +20,7 @@ function csvToJSON(input: string, output: string): void{
             console.error(error);
         }else{
             const encoding = chardet.detect(buffer);
-            const text = iconv.decode(buffer, encoding);
+            const text = iconv.decode(buffer, "SHIFT_JIS");
             csv.parse(text, (error, data: string[][])=>{
                 if(error){
                     console.error("Cannot parse CSV");
@@ -76,12 +76,13 @@ function jsonToCSV(input: string, output: string): void{
                     return row;
                 });
                 list.unshift(header);
-                csv.stringify(list, (error, data) => {
+                csv.stringify(list, (error, data: string) => {
                     if(error){
                         console.error("Cannot convert CSV");
                         console.error(error);
                     }else{
-                        fs.writeFile(output, data, (error)=>{
+                        const buffer = iconv.encode(data.replace(/\n/g, "\r\n"), "SHIFT_JIS");
+                        fs.writeFile(output, buffer, (error)=>{
                             if(error){
                                 console.error("Cannot write file");
                                 console.error(error);
