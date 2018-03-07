@@ -8,7 +8,6 @@
         "curly": true,
         "forin": true,
         "no-var-keyword": true,
-        "no-console": true,
         "no-unused-variable": [true, "react", {"ignore-pattern": "^React."}],
         "no-invalid-this": true,
         "prefer-const": true,
