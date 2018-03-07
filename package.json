@@ -15,8 +15,9 @@
   "author": "koki.hatada@gmail.com",
   "license": "ISC",
   "dependencies": {
-    "iconv-lite": "^0.4.19",
-    "node-csv": "^0.1.2"
+    "chardet": "^0.4.2",
+    "csv": "^2.0.0",
+    "iconv-lite": "^0.4.19"
   },
   "devDependencies": {
     "@types/iconv-lite": "0.0.1",
