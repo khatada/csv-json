@@ -1,0 +1,5 @@
+build/
+node_modules/
+config/default.json
+.vscode/settings.json
+*.db

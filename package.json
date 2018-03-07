@@ -1,0 +1,27 @@
+{
+  "name": "csv-json",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "tslint": "tslint --project ./tsconfig.json",
+    "tslint:fix": "tslint --project ./tsconfig.json --fix",
+    "build": "tsc -v & tsc",
+    "build:start": "tsc -v & tsc & node index.js",
+    "build:watch": "tsc -v & tsc --watch"
+  },
+  "author": "koki.hatada@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "iconv-lite": "^0.4.19",
+    "node-csv": "^0.1.2"
+  },
+  "devDependencies": {
+    "@types/iconv-lite": "0.0.1",
+    "@types/node": "^8.0.34",
+    "tslint": "^5.5.0",
+    "typescript": "2.3.4"
+  }
+}
